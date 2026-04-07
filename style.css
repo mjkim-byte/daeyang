@@ -1,0 +1,574 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 8px;
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  background: #e3e9f1;
+  color: #22304f;
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.sub-page {
+  padding-top: 76px;
+}
+
+/* 공통 섹션 */
+.section {
+  margin-bottom: 22px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  padding-left: 4px;
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 800;
+  color: #223b7b;
+  letter-spacing: -0.3px;
+}
+
+/* 메인 상단 */
+.hero-card {
+  background: #ffffff;
+  border: 1.5px solid #c9d3e3;
+  box-shadow: 0 14px 30px rgba(30, 50, 90, 0.12);
+  border-radius: 28px;
+  padding: 26px 22px 24px;
+  text-align: center;
+  margin-bottom: 22px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-illust {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.hero-illust img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-illust2 {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.hero-illust3 {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.hero-illust3 img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-card h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #223b7b;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #63708c;
+}
+
+/* 서브 상단 */
+.sub-hero-card {
+  background: #ffffff;
+  border: 1.5px solid #ccd5e3;
+  box-shadow: 0 14px 30px rgba(30, 50, 90, 0.12);
+  border-radius: 28px;
+  padding: 32px 24px 36px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.page-label {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #223b7b;
+}
+
+.sub-hero-card h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #223b7b;
+  letter-spacing: -0.4px;
+  word-break: keep-all;
+}
+
+.slogan-top {
+  margin: 8px 0 0;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  color: #ff7a00;
+  letter-spacing: -0.3px;
+}
+
+.slogan-main {
+  margin: 6px 0 0;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  color: #ff7a00;
+  letter-spacing: -0.3px;
+  line-height: 1.35;
+}
+
+.star {
+  margin: 0 4px;
+}
+
+/* 뒤로가기 */
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #ccd5e3;
+  box-shadow: 0 8px 18px rgba(30, 50, 90, 0.12);
+  color: #223b7b;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.back-btn:active {
+  transform: scale(0.96);
+}
+
+/* 공통 카드 */
+.glass-card {
+  width: 92%;
+  max-width: 600px;   
+  margin: 16px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 1.5px solid #ccd5e3;
+  box-shadow: 0 10px 24px rgba(30, 50, 90, 0.1);
+  border-radius: 22px;
+  color: inherit;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.glass-card:active {
+  transform: scale(0.985);
+}
+
+.featured-card {
+  border: 3px solid #223b7b;
+  box-shadow: 0 12px 26px rgba(34, 59, 123, 0.15);
+}
+
+/* index 카드형 링크 */
+a.glass-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-text-wrap {
+  min-width: 0;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #243a73;
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+
+.card-desc {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #6b7893;
+  word-break: keep-all;
+}
+
+.arrow {
+  flex-shrink: 0;
+  font-size: 28px;
+  line-height: 1;
+  color: #97a3bb;
+  margin-top: -2px;
+}
+
+/* 정보 카드 */
+.info-card,
+.text-card,
+.qr-card,
+.wifi-card,
+.poster-card,
+.schedule-card {
+  display: block;
+}
+
+/* 전화 문의 */
+.multi-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.info-title {
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #243a73;
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phone-btn {
+  display: block;
+  text-align: center;
+  padding: 14px 12px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1.5px solid #aebbd1;
+  color: #223b7b;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.phone-btn:active {
+  background: #223b7b;
+  color: #ffffff;
+}
+
+/* info 리스트 */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.info-label {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #223b7b;
+}
+
+.info-value {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #2d3a57;
+  word-break: keep-all;
+}
+
+/* 버튼 */
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  background: #ffffff;
+  color: #223b7b;
+  border: 2px solid #223b7b;
+  box-shadow: 0 8px 18px rgba(30, 50, 90, 0.08);
+  transition: all 0.25s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+.action-btn:hover {
+  background: #223b7b;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(34, 59, 123, 0.25);
+}
+
+.notice-line {
+  margin: 12px 4px 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #5f6e8c;
+  word-break: keep-all;
+}
+
+.notice-line span {
+  display: inline-block;
+  text-align: left;
+}
+
+/* 리스트 */
+.number-list,
+.bullet-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.number-list li,
+.bullet-list li {
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #33415f;
+  word-break: keep-all;
+}
+
+.number-list li:last-child,
+.bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+.extra-guide {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6e7b95;
+  word-break: keep-all;
+}
+
+/* QR */
+.qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qr-img {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+.qr-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #33415f;
+  word-break: keep-all;
+  flex: 1;
+}
+
+/* 와이파이 */
+.wifi-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wifi-text {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #33415f;
+}
+
+.wifi-qr {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.wifi-sub {
+  margin: 0;
+  font-size: 14px;
+  color: #7b879f;
+}
+
+/* 포스터 */
+.poster-card {
+  padding: 14px;
+}
+
+.poster-image {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* 일정 */
+.schedule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px 18px;
+  overflow: hidden;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+}
+
+.month {
+  font-weight: 800;
+  color: #223b7b;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.month span {
+  white-space: nowrap;
+}
+
+.content {
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #33415f;
+  text-align: left;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .schedule-row {
+    grid-template-columns: 102px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .content {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .app {
+    padding: 18px 14px 36px;
+  }
+
+  .hero-card,
+  .sub-hero-card {
+    border-radius: 24px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-title {
+    font-size: 21px;
+  }
+
+  .card-title,
+  .info-title {
+    font-size: 18px;
+  }
+
+  .card-desc,
+  .info-value,
+  .content,
+  .number-list li,
+  .bullet-list li,
+  .qr-text {
+    font-size: 15px;
+  }
+
+  .info-item {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .schedule-row {
+    grid-template-columns: 84px 1fr;
+    column-gap: 14px;
+  }
+
+  .qr-card {
+    gap: 14px;
+  }
+
+  .qr-img {
+    width: 92px;
+    height: 92px;
+  }
+}
