@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>문의</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef3fb;color:#172033;font-family:Pretendard,"Noto Sans KR",sans-serif}
+.page{width:min(100%,480px);min-height:100vh;margin:auto;background:#f5f8fd;padding-bottom:86px}
+header{height:66px;background:#fff;display:flex;align-items:center;gap:14px;padding:0 18px;border-bottom:1px solid #e7ebf2}
+header button{width:40px;height:40px;border:0;border-radius:13px;background:#eaf2ff;color:#2f6fed;font-size:20px}h1{font-size:20px}
+.content{padding:22px 18px}.intro{margin:2px 4px 18px}.intro h2{font-size:23px;margin:0 0 6px}.intro p{margin:0;color:#8b94a4;font-size:13px}
+.card{background:#fff;border-radius:20px;padding:17px 18px;margin-bottom:12px;box-shadow:0 8px 24px rgba(43,73,126,.06);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.info strong{display:block;font-size:15px;margin-bottom:5px}.info span{font-size:13px;color:#7b8497}.call{flex:0 0 auto;text-decoration:none;background:#2f6fed;color:#fff;font-size:12px;font-weight:900;padding:11px 13px;border-radius:12px}
+nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(100%,480px);height:74px;background:#fff;border-top:1px solid #e7ebf2;display:grid;grid-template-columns:repeat(3,1fr)}
+nav button{border:0;background:transparent;color:#929baa;font-weight:800}nav .active{color:#2f6fed}
+</style></head>
+<body><main class="page">
+<header><button onclick="history.back()">←</button><h1>문의</h1></header>
+<section class="content">
+<div class="intro"><h2>전화 문의</h2><p>버튼을 누르면 바로 전화할 수 있습니다.</p></div>
+<div class="card"><div class="info"><strong>교무실</strong><span>051-640-0580</span></div><a class="call" href="tel:0516400580">전화하기</a></div>
+<div class="card"><div class="info"><strong>홍보부장 노성용 선생님</strong><span>051-640-0571</span></div><a class="call" href="tel:0516400571">전화하기</a></div>
+<div class="card"><div class="info"><strong>홍보부 이효정 선생님</strong><span>051-640-0572</span></div><a class="call" href="tel:0516400572">전화하기</a></div>
+<div class="card"><div class="info"><strong>홍보부 김민지 선생님</strong><span>051-640-0573</span></div><a class="call" href="tel:0516400573">전화하기</a></div>
+</section>
+<nav><button onclick="location.href='index.html?home=1'">⌂<br><small>홈</small></button><button onclick="location.href='faq.html'">?<br><small>FAQ</small></button><button class="active">☎<br><small>문의</small></button></nav>
+</main></body></html>

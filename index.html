@@ -1,102 +1,169 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>대양고 학과 체험 프로그램</title>
-  <link rel="stylesheet" href="style.css" />
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2f6fed">
+  <title>대양고등학교 입학홍보 플랫폼</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
+  <div class="app-shell">
 
-    <header class="hero-card">
-      <img src="logo.png" alt="대양고 로고" class="logo" />
-      <div class="hero-illust">
-        <img src="logo2.png" alt="대양고 교육 프로그램 일러스트" />
+    <!-- 최초 1회 사용자 선택 -->
+    <section id="userSelectScreen" class="screen user-select-screen">
+      <div class="brand-mark"><img src="img/logo.png" alt="대양고등학교 로고"></div>
+      <p class="eyebrow">대양고등학교 입학홍보 플랫폼</p>
+      <h1>반갑습니다!</h1>
+      <p class="select-guide">해당하는 항목을 선택해주세요.</p>
+
+      <div class="user-select-list">
+        <button class="user-type-btn" data-user="student">
+          <span class="user-icon">🎒</span>
+          <span>중학생</span>
+        </button>
+        <button class="user-type-btn" data-user="parent">
+          <span class="user-icon">👨‍👩‍👧</span>
+          <span>학부모</span>
+        </button>
+        <button class="user-type-btn" data-user="teacher">
+          <span class="user-icon">👨‍🏫</span>
+          <span>중학교 교사</span>
+        </button>
       </div>
-      <h1>대양고 학과 체험 프로그램</h1>
-      <p class="subtitle">다양한 학과의 전공 체험과 학교 프로그램을 한눈에 확인하세요.</p>
-    </header>
-
-    <section class="section">
-      <h2 class="section-title">📢 현재 진행중인 프로그램</h2>
-
-      <a class='glass-card featured-card' href='esports.html'>
-        <div class="card-text-wrap">
-          <div class="card-title">🎮 DAEYANG ESPORTS CUP</div>
-          <div class="card-desc">현재 진행 중인 프로그램에 대한 내용을 확인하세요.</div>
-        </div>
-        <div class="arrow">›</div>
-      </a>
-
     </section>
 
-    <section class="section">
-      <h2 class="section-title">📁 프로그램 안내</h2>
-
-      <a class='glass-card' href='schedule.html'>
-        <div class="card-text-wrap">
-          <div class="card-title">📅 연간계획</div>
-          <div class="card-desc">월별 체험 프로그램 일정을 확인하세요.</div>
+    <!-- 메인 -->
+    <main id="mainApp" class="screen main-app is-hidden">
+      <header class="top-header">
+        <div>
+          <p class="welcome-label">WELCOME</p>
+          <h1 id="welcomeMessage">예비 대양고 학생님, 반갑습니다!</h1>
+          <p class="school-name">대양고등학교 입학홍보 플랫폼</p>
         </div>
-        <div class="arrow">›</div>
-      </a>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">학교 정보</h2>
+        <button id="changeUserBtn" class="change-user-btn" type="button">
+          <span aria-hidden="true">👤</span>
+          <span>사용자 변경</span>
+        </button>
+      </header>
 
-      <a class="glass-card" href="tel:0516400580">
-        <div class="card-text-wrap">
-          <div class="card-title">📞 학교 대표번호</div>
-          <div class="card-desc">051-640-0580</div>
+      <!-- 통합 검색 -->
+      <section class="search-wrap">
+        <label class="search-box">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="무엇이 궁금하신가요?" autocomplete="off">
+        </label>
+        <div id="searchResults" class="search-results is-hidden"></div>
+      </section>
+
+      <!-- 배너 -->
+      <section class="banner-section">
+        <div class="banner-slider">
+          <article id="slide1" class="banner-slide active">
+            <div class="banner-image-slot">
+              <img src="img/daeyang.png" alt="대양고등학교 전경">
+            </div>
+            <div class="banner-copy">
+              <span>DAEYANG HIGH SCHOOL</span>
+              <strong>미래를 준비하는 즐거운 학교</strong>
+            </div>
+          </article>
+
+          <article id="slide2" class="banner-slide">
+            <div class="banner-image-slot">
+              <img src="img/soccer.png" alt="대양고등학교 학교생활">
+            </div>
+            <div class="banner-copy">
+              <span>CAMPUS LIFE</span>
+              <strong>직접 보고, 배우고, 경험하는 학교생활</strong>
+            </div>
+          </article>
+
+          <article id="slide3" class="banner-slide">
+            <div class="banner-image-slot">
+              <img src="img/esports.png" alt="대양고등학교 e스포츠">
+            </div>
+            <div class="banner-copy">
+              <span>NEW POSSIBILITIES</span>
+              <strong>대양고에서 새로운 가능성을 만나보세요</strong>
+            </div>
+          </article>
         </div>
-        <div class="arrow">›</div>
-      </a>
 
-        <div class="glass-card info-card multi-phone">
-
-          <div class="info-title">
-           📞 상담/문의(입시홍보부)
-          </div>
-<div class="button-list">
-             <a href="tel:0516400571" class="phone-btn">051-640-0571</a>
-             <a href="tel:0516400572" class="phone-btn">051-640-0572</a>
-             <a href="tel:0516400573" class="phone-btn">051-640-0573</a>
-</div>
-</div>
-
-      <a class="glass-card" href="https://map.naver.com/p/entry/place/12006785?c=15.00,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202603301559&locale=ko&svcName=map_pcv5" target="_blank">
-        <div class="card-text-wrap">
-          <div class="card-title">📍 찾아 오시는 길</div>
-          <div class="card-desc">학교 위치를 지도에서 확인하세요.</div>
+        <div class="banner-dots">
+          <button class="dot active" data-slide="0" aria-label="첫 번째 배너"></button>
+          <button class="dot" data-slide="1" aria-label="두 번째 배너"></button>
+          <button class="dot" data-slide="2" aria-label="세 번째 배너"></button>
         </div>
-        <div class="arrow">›</div>
-      </a>
+      </section>
 
-      <a class="glass-card" href="https://school.busanedu.net/daeyang-h/" target="_blank" rel="noopener noreferrer">
+      <!-- 바로가기 -->
+      <section class="menu-section">
+        <p class="eyebrow">QUICK MENU</p>
+        <h2>대양고 바로가기</h2>
 
-        <div class="card-text-wrap">
-          <div class="card-title">학교 홈페이지</div>
-          <div class="card-desc">대양고등학교 홈페이지 바로가기</div>
+        <div class="menu-grid">
+          <button class="menu-card" data-action="video">
+            <div class="menu-illustration"><img src="img/Video.png" alt=""></div>
+            <span class="menu-title">학교 홍보영상</span>
+            <span class="menu-sub">5분 영상 바로보기</span>
+          </button>
+
+          <button class="menu-card" data-action="homepage">
+            <div class="menu-illustration"><img src="img/School.png" alt=""></div>
+            <span class="menu-title">학교 홈페이지</span>
+            <span class="menu-sub">공식 홈페이지</span>
+          </button>
+
+          <button class="menu-card" data-action="department">
+            <div class="menu-illustration"><img src="img/Department.png" alt=""></div>
+            <span class="menu-title">학과 소개</span>
+            <span class="menu-sub">학과 바로가기</span>
+          </button>
+
+          <button class="menu-card" data-action="news">
+            <div class="menu-illustration"><img src="img/Notice.png" alt=""></div>
+            <span class="menu-title">학교소식</span>
+            <span class="menu-sub">인스타 · 유튜브</span>
+          </button>
+
+          <button class="menu-card" data-action="schedule">
+            <div class="menu-illustration"><img src="img/Calendar.png" alt=""></div>
+            <span class="menu-title">학사일정</span>
+            <span class="menu-sub">학교 일정 확인</span>
+          </button>
+
+          <button class="menu-card" data-action="events">
+            <div class="menu-illustration"><img src="img/Event.png" alt=""></div>
+            <span class="menu-title">행사 안내</span>
+            <span class="menu-sub">진행 중인 행사</span>
+          </button>
         </div>
-        <div class="arrow">›</div>
-      </a>
+      </section>
 
-      <!-- Wi-Fi -->
-    <h2 class="section-title">📶 학교 Wi-Fi</h2>
-
-    <div class="glass-card wifi-card">
-      <p class="wifi-text">QR을 스캔하면 자동으로 연결됩니다</p>
-
-      <!-- 니가 만든 QR 넣으면 됨 -->
-      <img src="wifi.png" class="wifi-qr" />
-
-      <p class="wifi-sub">대양고 방문객 전용 네트워크</p>
-    </div>
-    </section>
-
+      <!-- 하단 고정 메뉴 -->
+      <nav class="bottom-nav">
+        <button class="nav-btn active" data-nav="home"><span>⌂</span><small>홈</small></button>
+        <button class="nav-btn" data-nav="faq"><span>?</span><small>FAQ</small></button>
+        <button class="nav-btn" data-nav="contact"><span>☎</span><small>문의</small></button>
+      </nav>
+    </main>
   </div>
+
+  <!-- 학교소식 선택창 -->
+  <div id="socialModal" class="modal-backdrop is-hidden">
+    <div class="modal-card">
+      <button id="closeSocialModal" class="modal-close" type="button" aria-label="닫기">×</button>
+      <p class="eyebrow">SCHOOL NEWS</p>
+      <h2>대양고의 소식을 만나보세요!</h2>
+      <div class="modal-actions">
+        <button id="instagramBtn" class="action-btn">📸 공식 인스타그램</button>
+        <button id="youtubeChannelBtn" class="action-btn">▶ 공식 유튜브</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

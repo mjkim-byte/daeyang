@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+body{margin:0;background:#eef3fb;color:#1d2638;font-family:Pretendard,"Noto Sans KR",Apple SD Gothic Neo,sans-serif}
+button{font:inherit}
+.schedule-page{width:min(100%,520px);min-height:100vh;margin:0 auto;background:#fff;padding-bottom:82px}
+.page-header{height:62px;display:flex;align-items:center;gap:14px;padding:0 16px;border-bottom:1px solid #e6e8ec;background:#fff;position:sticky;top:0;z-index:20}
+.page-header h1{margin:0;font-size:21px}
+.back-btn{width:38px;height:38px;border:0;border-radius:12px;background:#eef4ff;color:#2868d8;font-size:21px;cursor:pointer}
+
+.schedule-wrap{padding:16px 10px 26px}
+.semester-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.semester-tab{height:42px;border:1px solid #d9e2ef;border-radius:10px;background:#fff;color:#536078;font-weight:800;cursor:pointer}
+.semester-tab.active{background:#2f6fed;color:#fff;border-color:#2f6fed}
+.guide{margin:0 0 10px;color:#8a93a2;font-size:11px;text-align:right}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #2d2d2d;background:#fff}
+.schedule-table{width:100%;min-width:760px;border-collapse:collapse;table-layout:fixed;font-size:11px;color:#555}
+.schedule-table th,.schedule-table td{border:1px solid #cfd2d6;text-align:center;vertical-align:middle;padding:6px 4px;line-height:1.3}
+.schedule-table thead th{background:#f2f2f2;color:#333;font-weight:800}
+.schedule-table .semester-col{width:42px}
+.schedule-table .month-col{width:44px}
+.schedule-table .week-col{width:36px}
+.schedule-table .date-col{width:94px}
+.schedule-table .day-col{width:128px}
+.schedule-table td.semester-cell{font-weight:800;color:#555;background:#fff}
+.schedule-table td.month-cell{font-weight:700}
+.schedule-table td.week-cell{color:#668}
+.schedule-table td.date-cell{white-space:nowrap}
+.schedule-table .holiday{color:#e12e2e;font-weight:800}
+.schedule-table .special{color:#174dd7;font-weight:800}
+.schedule-table .muted{color:#777}
+.notice{margin:14px 2px 0;text-align:center;color:#8b94a4;font-size:11px}
+
+.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(100%,520px);height:72px;background:#fff;border-top:1px solid #e7ebf2;display:grid;grid-template-columns:repeat(3,1fr);z-index:30}
+.bottom-nav button{border:0;background:transparent;color:#929baa;display:grid;place-content:center;gap:2px;cursor:pointer}
+.bottom-nav span{font-size:20px;color:#2f6fed;font-weight:800}
+.bottom-nav small{font-size:11px;font-weight:800}
+
+@media (max-width:520px){
+  .schedule-wrap{padding-left:8px;padding-right:8px}
+}

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>행사 안내</title>
+<style>
+:root{
+  --blue:#2f6fed;
+  --blue-dark:#1f56ca;
+  --blue-soft:#eaf2ff;
+  --sky:#f4f8ff;
+  --text:#172033;
+  --muted:#7b8497;
+  --line:#e7ebf2;
+  --shadow:0 10px 28px rgba(43,73,126,.07);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#eef3fb;
+  color:var(--text);
+  font-family:Pretendard,"Noto Sans KR",Apple SD Gothic Neo,sans-serif;
+}
+button,a{font:inherit}
+.page{
+  width:min(100%,480px);
+  min-height:100vh;
+  margin:0 auto;
+  background:var(--sky);
+  padding-bottom:92px;
+}
+.page-header{
+  height:68px;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.page-header h1{
+  margin:0;
+  font-size:20px;
+}
+.back-btn{
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:13px;
+  background:var(--blue-soft);
+  color:var(--blue);
+  font-size:20px;
+  cursor:pointer;
+}
+.hero{
+  margin:18px;
+  padding:24px 20px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#ffffff 0%,#f7faff 100%);
+  box-shadow:var(--shadow);
+}
+.hero .eyebrow{
+  margin:0 0 7px;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.1em;
+}
+.hero h2{
+  margin:0;
+  font-size:24px;
+  line-height:1.35;
+}
+.hero p{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+.content{
+  padding:0 18px 24px;
+}
+.section-title{
+  margin:24px 2px 12px;
+  font-size:19px;
+}
+.card{
+  padding:18px;
+  margin-bottom:12px;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+.card p{
+  margin:5px 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+.card strong{
+  color:var(--text);
+}
+.info-grid{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:11px 10px;
+  font-size:13px;
+  line-height:1.55;
+}
+.info-grid strong{color:#244f99}
+.primary-btn,
+.secondary-btn{
+  width:100%;
+  min-height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:900;
+  cursor:pointer;
+}
+.primary-btn{
+  border:0;
+  background:var(--blue);
+  color:#fff;
+}
+.secondary-btn{
+  border:1px solid var(--blue);
+  background:#fff;
+  color:var(--blue);
+}
+.button-stack{
+  display:grid;
+  gap:9px;
+}
+.clean-list{
+  margin:0;
+  padding-left:20px;
+  color:#46536c;
+  font-size:13px;
+  line-height:1.7;
+}
+.clean-list li{margin:7px 0}
+.poster-slot{
+  min-height:180px;
+  display:grid;
+  place-items:center;
+  border:2px dashed #cbd7ea;
+  border-radius:18px;
+  background:#fafdff;
+  color:#9aa5b6;
+  font-size:13px;
+}
+.schedule-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  gap:10px;
+  padding:10px 0;
+  border-bottom:1px solid #eef1f6;
+  font-size:13px;
+  line-height:1.55;
+}
+.schedule-row:last-child{border-bottom:0}
+.schedule-row strong{color:#244f99}
+.bottom-nav{
+  position:fixed;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  width:min(100%,480px);
+  height:76px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:rgba(255,255,255,.97);
+  border-top:1px solid var(--line);
+  z-index:30;
+}
+.bottom-nav button{
+  border:0;
+  background:transparent;
+  color:#98a0ae;
+  font-weight:800;
+  cursor:pointer;
+}
+.bottom-nav span{
+  display:block;
+  color:var(--blue);
+  font-size:20px;
+  margin-bottom:2px;
+}
+.bottom-nav small{
+  font-size:11px;
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="page-header">
+    <button class="back-btn" onclick="history.back()">←</button>
+    <h1>행사 안내</h1>
+  </header>
+
+  <section class="hero">
+      <p class="eyebrow">EVENT PROGRAM</p>
+      <h2>현재 참여 가능한 행사</h2>
+      <p>대양고의 다양한 프로그램을 확인해보세요.</p>
+    </section>
+  <section class="content">
+    
+    <div class="card">
+      <p class="eyebrow">상시 모집</p>
+      <h3>🎮 DAEYANG ESPORTS CUP (대양을 이겨라!)</h3>
+      <p><strong>중학생과 대양고 재학생이 함께하는 e스포츠 교류형 프로그램</strong></p>
+      <p>현재 12월까지 참가 신청은 마감되었으나, 공석 발생 시 추가 참여<br>가능하도록 상시 모집 중입니다.</p>
+      <button class="primary-btn" onclick="location.href='esports.html'">자세히 보기</button>
+    </div>
+
+    <div class="card">
+      <p class="eyebrow">진행중</p>
+      <h3>💻 중학생 학과 체험 프로그램</h3>
+      <p><strong>대양고에서 배우는 전문 교과를 직접 체험해 보세요.</strong></p>
+      <p>중학교에서는 접하기 어려운 전공 실습을 직접 경험하며 대양고의<br>다양한 학과와 진로를 미리 만나볼 수 있습니다.</p>
+      <button class="primary-btn" onclick="location.href='experience.html'">자세히 보기</button>
+    </div>
+    
+  </section>
+
+  <nav class="bottom-nav">
+    <button onclick="location.href='index.html?home=1'"><span>⌂</span><small>홈</small></button>
+    <button onclick="location.href='faq.html'"><span>?</span><small>FAQ</small></button>
+    <button onclick="location.href='contact.html'"><span>☎</span><small>문의</small></button>
+  </nav>
+</main>
+</body>
+</html>
